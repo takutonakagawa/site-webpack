@@ -22,6 +22,18 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpg)/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              esModule: false,
+              name: "assets/images/[name].[ext]",
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
